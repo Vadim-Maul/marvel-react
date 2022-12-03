@@ -142,6 +142,72 @@ const CharList = () => {
             </CardContent>
           </CardActionArea>
         </Card>
+        <Card sx={{ background: "rgb(26, 32, 39)", maxWidth: 200 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={abyss}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h6"
+                color="#fff"
+                component="div"
+                align="center"
+                sx={{ textTransform: "uppercase" }}
+              >
+                Abyss
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{ background: "rgb(26, 32, 39)", maxWidth: 200 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={abyss}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h6"
+                color="#fff"
+                component="div"
+                align="center"
+                sx={{ textTransform: "uppercase" }}
+              >
+                Abyss
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{ background: "rgb(26, 32, 39)", maxWidth: 200 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={abyss}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h6"
+                color="#fff"
+                component="div"
+                align="center"
+                sx={{ textTransform: "uppercase" }}
+              >
+                Abyss
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </div>
       <Grid container justifyContent="center">
         <Button sx={{ marginTop: "20px" }} variant="outlined">
