@@ -1,0 +1,42 @@
+import Button from "@mui/material/Button";
+import thor from "../../resources/img/thor.jpeg";
+import mjolnir from "../../resources/img/mjolnir.png";
+import Stack from "@mui/material/Stack";
+import "./randomChar.scss";
+
+const RandomChar = () => {
+  return (
+    <div className="randomchar">
+      <div className="randomchar__block">
+        <img src={thor} alt="Random character" className="randomchar__img" />
+        <div className="randomchar__info">
+          <p className="randomchar__name">Thor</p>
+          <p className="randomchar__descr">
+            As the Norse God of thunder and lightning, Thor wields one of the
+            greatest weapons ever made, the enchanted hammer Mjolnir. While
+            others have described Thor as an over-muscled, oafish imbecile, he's
+            quite smart and compassionate...
+          </p>
+          <div className="randomchar__btns">
+            <Stack spacing={3} direction="row">
+              <Button variant="outlined">homepage</Button>
+              <Button variant="outlined">Wiki</Button>
+            </Stack>
+          </div>
+        </div>
+      </div>
+      <div className="randomchar__static">
+        <p className="randomchar__title">
+          Random character for today!
+          <br />
+          Do you want to get to know him better?
+        </p>
+        <p className="randomchar__title">Or choose another one</p>
+        <Button variant="outlined">true it</Button>
+        <img src={mjolnir} alt="mjolnir" className="randomchar__decoration" />
+      </div>
+    </div>
+  );
+};
+
+export default RandomChar;
