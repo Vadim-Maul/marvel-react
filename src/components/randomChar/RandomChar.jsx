@@ -4,7 +4,7 @@ import mjolnir from "../../resources/img/mjolnir.png";
 import Stack from "@mui/material/Stack";
 import { Skeleton, Button } from "@mui/material";
 import { MarvelService } from "../../services/MarvelService";
-import ErrorMesage from "../errorMesage/ErrorMessage";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import "./randomChar.scss";
 
@@ -24,11 +24,17 @@ class RandomChar extends Component {
   onCharLoaded = (char) => {
     this.setState({ char, loading: false });
   };
+  onCharLoading = () => {
+    this.setState({
+      loading: true,
+    });
+  };
   onError = () => {
     this.setState({ loading: false, error: true });
   };
   updateChar = () => {
     const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+    this.onCharLoading();
     this.marvelService
       .getCharacter(id)
       .then(this.onCharLoaded)
@@ -37,7 +43,7 @@ class RandomChar extends Component {
 
   render() {
     const { char, loading, error } = this.state;
-    const errorMesage = error ? <ErrorMesage /> : null;
+    const errorMesage = error ? <ErrorMessage /> : null;
     const skeleton = loading ? (
       <Skeleton
         sx={{ bgcolor: "grey.900", margin: "0 auto", width: "50%" }}
@@ -78,8 +84,8 @@ const View = ({ char }) => {
   const imgStyle =
     thumbnail ===
     "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
-      ? { "object-fit": "contain" }
-      : { "object-fit": "cover" };
+      ? { objectFit: "contain" }
+      : { objectFit: "cover" };
   return (
     <div className="randomchar__block">
       <img
